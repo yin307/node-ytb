@@ -43,13 +43,19 @@ app.post('/get', (req, res) =>{
                 }
 
             }
-            res.send(response);
+            res.send({
+                data: response
+            });
 
         }).catch(e => {
-            res.send([]);
+             res.send({
+                data: []
+            });
         });
     }catch(err){
-        res.send([]);
+         res.send({
+                data: []
+            });
     }
     
 })
